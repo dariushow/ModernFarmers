@@ -1,0 +1,353 @@
+/*car {
+	height: 300px;
+	width: : 300px;
+}*/
+body {
+  overflow-x: hidden; 
+}
+img {
+  max-width: 100%;
+  overflow-y: hidden; 
+  overflow-x: hidden; 
+}
+
+#navigation {
+
+  background-image: linear-gradient(to right, #FC354C , #0ABFBC);
+  font-size: 20px;
+  font-family: sans-serif;
+
+}
+
+#chorbi {
+  font-weight: 200px;
+  font-family: arial-black;
+  letter-spacing: 10px;
+}
+
+.feature-collections {
+  font-size: 2em;
+  font-weight: 900;
+  font-family: courier;
+  letter-spacing: 5px;
+  text-decoration: underline;
+  
+
+}
+
+
+
+
+.card {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+}
+
+.card-text {
+  font-size: 24px;
+  font-weight: 300%;
+  font-family: roboto;
+}
+
+/* THE MAINCONTAINER HOLDS EVERYTHING */
+.maincontainer{
+  position: absolute;
+  width: 250px;
+  height: 320px;
+  background: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}
+
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+#flip{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+
+}
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+#flip:hover{
+  transform: rotateY(180deg);
+}
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .thefront{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: white;
+  color: #000;
+ 
+
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #fafafa;
+  color: #333;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+
+/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+.thefront h1, .theback h1{
+  font-family: 'zilla slab', sans-serif;
+  padding: 30px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+
+}
+
+.thefront p, .theback p{
+  font-family: 'zilla slab', sans-serif;
+  padding: 30px;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+}
+/*This block (ends here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+/*start of 3d carousel*/
+ .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 380px;
+      background: #fff;
+    }
+
+#caro {
+  max-height: 300px;
+  max-width: 300px;
+}
+
+.three-d {
+  padding-top: 100px;
+}
+
+.swiper-slide .imgBX {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+ 
+}
+
+.swiper-slide .imgBX #caro {
+  width: 100%;
+}
+
+.swiper-slide .details {
+  box-sizing: border-box;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.swiper-slide .details h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.swiper-slide .details h3 span {
+  font-size: 16px;
+  color: #f44336;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/*end of 3d carousel*/
+
+
+/*start of parallax*/
+
+section {
+  width: 100%;
+  height: 50vh;
+  box-sizing: border-box;
+}
+
+.sec1 {
+  background: url(../app/assets/images/parallax1.jpg);
+  background-size: cover;
+  background-position:  center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.sec2 {
+  background: url(../app/assets/images/parallax2.jpg);
+  background-size: cover;
+  background-position:  center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.sec3 {
+  background: url(../app/assets/images/parallax3.jpg);
+  background-size: cover;
+  background-position:  center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.sec4 {
+  background: url(../app/assets/images/parallax4.jpg);
+  background-size: cover;
+  background-position:  center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.secText {
+  padding: 20px 100px;
+  height: auto;
+}
+
+.secText p {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+/*start of trending*/
+#list {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#list1 {
+  list-style: none;
+  font-family: arial;
+  font-size: 3em;
+  letter-spacing: 15px;
+  color: #484848;
+  text-shadow: none;
+  animation: animate 1s infinite linear
+}
+
+@keyframes animate 
+{
+  0%
+{
+  color: #484848;
+  text-shadow: none;
+} 
+    18%
+    {
+        color: #484848;
+        text-shadow: none;
+    }
+      20%
+      {
+        color: #fff900;
+        text-shadow: 0 0 7px #fff900 , 0 0 20px #ff6c00;
+      }
+    
+  30%
+{
+  color: #484848;
+  text-shadow: none;
+} 
+    35%
+    {
+        color: #484848;
+        text-shadow: 0 0 7px #fff900 , 0 0 20px #ff6c00;
+    }
+    70%
+{
+  color: #484848;
+  text-shadow: none;
+  } 
+  85%
+    {
+      color: #fff900;
+      text-shadow: 0 0 7px #fff900 , 0 0 20px #ff6c00;
+    }
+}
+
+
+#list #list1:nth-child(1)
+{
+  animation-delay: .2s;
+}
+#list #list1:nth-child(2)
+{
+  animation-delay: .4s;
+}
+#list #list1:nth-child(3)
+{
+  animation-delay: .6s;
+}
+#list #list1:nth-child(4)
+{
+  animation-delay: .8s;
+}
+#list #list1:nth-child(5)
+{
+  animation-delay: 1s;
+}
+#list #list1:nth-child(6)
+{
+  animation-delay: 1.2s;
+}
+#list #list1:nth-child(7)
+{
+  animation-delay: 1.4s;
+}
+#list #list1:nth-child(8)
+{
+  animation-delay: 1.6s;
+}
+
+/*end of trending now*/
