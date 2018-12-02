@@ -1,7 +1,8 @@
-/*car {
-	height: 300px;
-	width: : 300px;
-}*/
+
+
+#car {
+	max-height: 200vh;
+}
 body {
   overflow-x: hidden; 
 }
@@ -11,18 +12,29 @@ img {
   overflow-x: hidden; 
 }
 
+
 #navigation {
 
-  background-image: linear-gradient(to right, #FC354C , #0ABFBC);
+
+  /*background-image: linear-gradient(to right, #FC354C , #0ABFBC);*/
   font-size: 20px;
   font-family: sans-serif;
+  background: #DCEDC2;
+  z-index: 3
 
 }
 
-#chorbi {
+.header-title {
+ font-family: 'Playfair Display', serif;
+ letter-spacing: 1px;
+}
+
+
+
+#modern-farmers {
   font-weight: 200px;
   font-family: arial-black;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
 }
 
 .feature-collections {
@@ -33,6 +45,10 @@ img {
   text-decoration: underline;
   
 
+}
+
+.line:hover {
+  text-decoration: underline;
 }
 
 
@@ -136,6 +152,7 @@ img {
       width: 100%;
       padding-top: 50px;
       padding-bottom: 50px;
+      
     }
     .swiper-slide {
       background-position: center;
@@ -200,16 +217,29 @@ img {
 /*end of 3d carousel*/
 
 
+#parallax-text {
+  font-size: 22px;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 100px;
+  text-align: justify;
+  letter-spacing: 1px;
+
+
+}
+
+
+
+
 /*start of parallax*/
 
 section {
   width: 100%;
-  height: 50vh;
+  height: 120vh;
   box-sizing: border-box;
 }
 
 .sec1 {
-  background: url(../app/assets/images/parallax1.jpg);
+  background: url(../app/assets/images/chicken-parallax.jpg);
   background-size: cover;
   background-position:  center center;
   background-repeat: no-repeat;
@@ -218,7 +248,7 @@ section {
 }
 
 .sec2 {
-  background: url(../app/assets/images/parallax2.jpg);
+  background: url(../app/assets/images/parralax2.jpg);
   background-size: cover;
   background-position:  center center;
   background-repeat: no-repeat;
@@ -227,16 +257,7 @@ section {
 }
 
 .sec3 {
-  background: url(../app/assets/images/parallax3.jpg);
-  background-size: cover;
-  background-position:  center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-}
-
-.sec4 {
-  background: url(../app/assets/images/parallax4.jpg);
+  background: url(../app/assets/images/pig-parallax.jpg);
   background-size: cover;
   background-position:  center center;
   background-repeat: no-repeat;
@@ -351,3 +372,378 @@ section {
 }
 
 /*end of trending now*/
+
+/*start of footer*/
+#footer {
+  background: #2F9599;
+}
+#snake-hover  {
+  list-style: none;
+  display: flex;
+}
+
+#snake-hover #snakehover a {
+  display: block;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  line-height: 50px;
+  font-size: 40px;
+  text-align: center;
+  background: #2F9599;
+  text-decoration: none;
+  color: #262626;
+  margin: 0 10px;
+  transition: .5s;
+}
+
+#snake-hover #snakehover a span {
+  position: absolute;
+  transition: transform .5s;
+}
+
+
+#snake-hover #snakehover a span:nth-child(2),
+#snake-hover #snakehover a span:nth-child(4) {
+  width: 5px;
+  height: 100%;
+  background: #262626;
+}
+
+
+#snake-hover #snakehover a span:nth-child(2) {
+top: 0;
+left: 0;
+transform: scaleY(0);
+transform-origin: bottom;
+}
+
+#snake-hover #snakehover a:hover span:nth-child(2) {
+ transform: scaleY(1);
+  transform-origin: top;
+  transition: transform .5s; 
+}
+
+
+#snake-hover #snakehover a span:nth-child(4) {
+top: 0;
+right: 0;
+transform: scaleY(0);
+transform-origin: top;
+}
+
+#snake-hover #snakehover a:hover span:nth-child(4) {
+ transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform .5s; 
+}
+
+.footer-title {
+  font-family: 'Dosis', sans-serif;
+  font-size: 34px;
+  font-weight: 100px;
+}
+
+.footer-p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 20px;
+  letter-spacing: 1px;
+}
+
+#payment {
+  display: flex;
+  list-style: none;
+}
+
+#payment #payment-option  a {
+ display: block;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  line-height: 50px;
+  font-size: 40px;
+  text-align: center;
+  background: #2F9599;
+  text-decoration: none;
+  color: #262626;
+  margin: 0 10px;
+  transition: .5s;
+}
+
+.copyright {
+  color: white;
+  font-size: 18px;
+  font-weight: 100px;
+}
+
+
+
+/*start of registration form*/
+.registration-background {
+  background: url(../app/assets/images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.main {
+  width: 400px;
+  background: #E5FCC2;
+  opacity: .9;
+  margin: 40px auto;
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #555;
+}
+
+header {
+  text-align: center; 
+}
+
+#avatar {
+  height: 100px;
+  width: 100px;
+}
+
+.company  {
+  font-size: 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #009688;
+}
+
+.heading {
+  font-weight: bold;
+  color: #666;
+  font-size: 25px;
+}
+
+#form-box {
+  padding: 10px;
+}
+
+.inp {
+  width: 100%;
+  padding: 10px 10px 10px 0;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #999;
+  font-size: 16px;
+  color: #009688;
+  background: #eceff1;
+}
+
+.inp:focus {
+  outline: none;
+  color: #009688;
+  font-weight: bolder;
+  border-bottom: 1px solid #009688;
+}
+
+.sub-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  background: #009688;
+  cursor: pointer;
+}
+
+.sub-btn:focus {
+  outline: none;
+}
+
+.sub-btn:hover {
+  background: #00796b;
+
+}
+
+.footer-registration {
+  text-align: center;
+  padding: 10px;
+  font-weight: bolder;
+  color: #546e7a;
+}
+
+.footer-registration {
+  text-decoration: none;
+  color: #1976d2;
+
+}
+
+.icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  padding: 8px 8px 8px 0;
+  color: #006988;
+}
+
+.input {
+  margin-left: 35px;
+}
+
+@media (max-width: 720px) {
+  .main {
+    width: 90%;
+  }
+}
+
+/*end of registration form*/
+
+#razor-shape {
+  width: 100%
+  height: 100vh;
+}
+
+#razor-shape.section1 {
+  position: relative;
+  overflow: hidden;
+ background: url(../app/assets/images/wheat.jpg);
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+ background-size: cover;
+
+
+}
+
+#razor-shape.section1:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform-origin: right;
+  transform: skewY(8deg);
+}
+
+#razor-shape.section1:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform-origin: left;
+  transform: skewY(-8deg);
+}
+
+#razor-shape.section3 {
+  position: relative;
+  overflow: hidden;
+ background: url(../app/assets/images/windmill.jpg);
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+ background-size: cover;
+
+}
+
+#razor-shape.section3:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform-origin: left;
+  transform: skewY(4deg);
+}
+
+#razor-shape.section2 {
+  height: auto;
+  padding: 100px;
+  box-sizing: border-box;
+}
+
+
+
+
+ .team-row p {
+  border-left: 5px solid #f00;
+  color: white;
+ }
+
+ @import url(https://fonts.googleapis.com/css?family=Poppins:300,700);
+.snip1581 {
+  font-family: 'Poppins:400,700', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 8px;
+  min-width: 250px;
+  max-width: 310px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.snip1581 * {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.snip1581 img {
+ width: 400px;
+  vertical-align: top;
+  height: 70vh;
+}
+.snip1581 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.snip1581 h3 {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 3px 0;
+}
+.snip1581 .title1 {
+  font-weight: 700;
+}
+.snip1581 .title2 {
+  color: #a58e7c;
+  font-weight: 300;
+}
+.snip1581 .title3 {
+  font-weight: 700;
+  font-size: 25px;
+}
+.snip1581 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.snip1581:hover img,
+.snip1581.hover img {
+  -webkit-transform: scale(1.3) rotate(5deg);
+  transform: scale(1.3) rotate(5deg);
+}
+
+
+
+
