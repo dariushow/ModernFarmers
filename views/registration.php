@@ -24,19 +24,21 @@
 			<div class="company">Modern Farmers</div>
 			<div class="heading">Buy Now</div>
 		</header>
+
+		
 		<form action="#" method="post" id="form-box">
 			<div class="icon">
 				<i class="far fa-user"></i><span class="fa fab-user"></span>
 			</div>
 			<div class="input">
-				<input type="text" name="username" placeholder="Username" class="inp" required>
+				<input id="username" type="text" name="username" placeholder="Username" class="inp" required>
 			</div>
 
 			<div class="icon">
 				<i class="far fa-envelope"></i><span class="fa fab-user"></span>
 			</div>
 			<div class="input">
-				<input type="email" name="email" placeholder="Email" class="inp" required>
+				<input id="email" type="email" name="email" placeholder="Email" class="inp" required>
 			</div>
 
 
@@ -44,14 +46,14 @@
 				<i class="fas fa-key"></i><span class="fa fab-user"></span>
 			</div>
 			<div class="input">
-				<input type="password" name="password" placeholder="Password" class="inp" required>
+				<input id="password" type="password" name="password" placeholder="Password" class="inp" required>
 			</div>
 
 			<div class="icon">
 				<i class="fas fa-lock"></i><span class="fa fab-user"></span>
 			</div>
 			<div class="input">
-				<input type="password" name="password" placeholder="Re-Type Password" class="inp" required>
+				<input id="confirm-password" type="password" name="password" placeholder="Re-Type Password" class="inp" required>
 			</div>
 
 			<input type="submit" name="submit" value="REGISTER NOW" class="sub-btn">

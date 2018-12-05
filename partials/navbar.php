@@ -1,5 +1,6 @@
 
-<div class=""></div>
+
+
  <nav id="navigation" class="navbar navbar-expand-lg navbar-light">
         <a id="modern-farmers" class="navbar-brand" href="#"><i class="fas fa-home"></i>Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,10 +13,10 @@
               <a class="nav-link" href="registration.php">Register<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-shopping-bag px-2"></i>Farm</a>
+              <a class="nav-link" href="farm.php"><i class="fas fa-shopping-bag px-2"></i>Farm</a>
             </li>
               <li class="nav-item">
-              <a class="nav-link" href="#">About us</a>
+              <a class="nav-link" href="aboutus.php">About us</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -43,3 +44,5 @@
           </form>
         </div>
       </nav>  
+
+     
