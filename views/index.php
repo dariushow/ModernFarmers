@@ -1,30 +1,12 @@
 <?php 
 
+require_once("../partials/start_body.php");
+
 ?>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Landing</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-  <link rel="stylesheet" type="text/css" href="swiper.min.css">
-  <!-- font-icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <!-- external css -->
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <!-- google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Dosis|Playfair+Display" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans|Slabo+27px" rel="stylesheet">
 
 
-
-</head>
-<body>
 
   <div class="container">
     <div class="row">
@@ -45,20 +27,6 @@
         <h2>Committed To You.</h2>
         <h3>Think Quality!</h3>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
   </div>
 
@@ -299,7 +267,7 @@
   <div class="swiper-pagination"></div>
 </div>
 
-<script type="text/javascript" src="swiper.min.js"></script>
+<script type="text/javascript" src="../app/assets/js/swiper.min.js"></script>
 
 <script>
   var swiper = new Swiper('.swiper-container', {
@@ -405,6 +373,7 @@
             </li>
           </ul>
 
+
         </div>
 
         <div class="col-lg-4 col-md-6 footer-newsletter mt-5">
@@ -420,8 +389,6 @@
   </div>
   <p class="copyright  text-center bg-dark">Copyright &copy;Modern Farmers</p>
 </footer>
-
-
 
 
 

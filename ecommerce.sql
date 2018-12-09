@@ -1,6 +1,6 @@
--- MySQL dump 10.16  Distrib 10.1.36-MariaDB, for Win32 (AMD64)
+-- MySQL dump 10.16  Distrib 10.1.16-MariaDB, for Win32 (AMD64)
 --
--- Host: localhost    Database: ecommerce
+-- Host: localhost    Database: ECOMMERCE
 -- ------------------------------------------------------
 -- Server version	10.1.36-MariaDB
 
@@ -93,6 +93,117 @@ INSERT INTO `items` VALUES (1,'FERALROOSTER',2100,'Fresh From Farm','catalog1.jp
 UNLOCK TABLES;
 
 --
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `transaction_code` varchar(255) NOT NULL,
+  `purchase_date` date NOT NULL,
+  `total` decimal(10,2) DEFAULT NULL,
+  `status_id` int(11) NOT NULL,
+  `payment_mode_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `status_id` (`status_id`),
+  KEY `payment_mode_id` (`payment_mode_id`),
+  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`status_id`) REFERENCES `statuses` (`id`),
+  CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`payment_mode_id`) REFERENCES `payment_modes` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `orders_items`
+--
+
+DROP TABLE IF EXISTS `orders_items`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `orders_items` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) NOT NULL,
+  `item_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `order_id` (`order_id`),
+  KEY `item_id` (`item_id`),
+  CONSTRAINT `orders_items_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
+  CONSTRAINT `orders_items_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders_items`
+--
+
+LOCK TABLES `orders_items` WRITE;
+/*!40000 ALTER TABLE `orders_items` DISABLE KEYS */;
+/*!40000 ALTER TABLE `orders_items` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `payment_modes`
+--
+
+DROP TABLE IF EXISTS `payment_modes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `payment_modes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `payment_modes`
+--
+
+LOCK TABLES `payment_modes` WRITE;
+/*!40000 ALTER TABLE `payment_modes` DISABLE KEYS */;
+INSERT INTO `payment_modes` VALUES (1,'COD'),(2,'PayPal');
+/*!40000 ALTER TABLE `payment_modes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `statuses`
+--
+
+DROP TABLE IF EXISTS `statuses`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `statuses` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `statuses`
+--
+
+LOCK TABLES `statuses` WRITE;
+/*!40000 ALTER TABLE `statuses` DISABLE KEYS */;
+INSERT INTO `statuses` VALUES (1,'pending'),(2,'completed'),(3,'cancelled');
+/*!40000 ALTER TABLE `statuses` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -110,7 +221,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,7 +230,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'werfdgdfhf','$2y$10$JrF5MfyGQIIuRAXtxiVw5u8rnqe6eXgfI3oDw7JOrmn8sWxqpVM32','gasdasd@yahoo.com','asjdfhkasdfasdf','asdgadsfgdsfh','1414 casanas street sampaloc');
+INSERT INTO `users` VALUES (1,'werfdgdfhf','$2y$10$JrF5MfyGQIIuRAXtxiVw5u8rnqe6eXgfI3oDw7JOrmn8sWxqpVM32','gasdasd@yahoo.com','asjdfhkasdfasdf','asdgadsfgdsfh','1414 casanas street sampaloc'),(2,'howdarius','$2y$10$p1YMim9Ra5Abbcft1hB7sOhOXuucL9HE6oLoX4/Qi9ctPuSlSGVNO','cruzalexandra19@yahoo.com','dariushow','paano','1414 casanas street'),(3,'abiegail123','$2y$10$pVI8cvjZeVtWB5tW/D7GqegfMUmbjV/YxRjiwXGhiIXXE6LegjTOm','asdasdasd@yahoo.com','abiegail123','tope','1414 casanas street');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -132,4 +243,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-05 15:16:58
+-- Dump completed on 2018-12-07 16:36:34

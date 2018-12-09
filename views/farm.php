@@ -4,24 +4,11 @@ $pageTitle = "catalog";
 require_once("../controllers/connect.php");
 require_once("../controllers/get_categories.php");
 require_once("../controllers/get_product.php");
-
+require_once("../partials/start_body.php");
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Farm</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script
-	src="http://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
 
-<?php require_once("../partials/navbar.php"); ?>
+	<?php require_once("../partials/navbar.php"); ?>
 
 	<main id="main" class="role farm-product">
 		<div class="container">
@@ -65,8 +52,9 @@ require_once("../controllers/get_product.php");
 									<h5 class="card-title">
 										<a href="product.php?id=<?php echo $item['id'] ?>"><?php echo $item['item_name'] ?></a>
 									</h5>
-									<p class="card-text">Php <?php echo $item['price'] ?></p>
-									<a href="#" class="btn btn-primary">Add to Cart</a>
+									<p class="card-text mb-1">Php <?php echo number_format($item['price'], 2, ".", ",") ?></p>
+									<input type="number" class="form-control" value=1>
+									<button data-id="<?php echo $item["id"] ?>" class="add-cart btn btn-sm btn-outline-primary mt-1"> Add to Cart </button>
 								</div>
 							</div>
 						<?php endforeach; ?>			
@@ -76,6 +64,6 @@ require_once("../controllers/get_product.php");
 		</div>
 	</main>
 
-<?php require_once("../partials/end_body.php") ?>
+	<?php require_once("../partials/end_body.php") ?>
 
 

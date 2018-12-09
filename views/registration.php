@@ -21,7 +21,7 @@
 	<div class="main">
 		<header>
 			<div class="image"><img id="avatar" src="../app/assets/images/avatar.jpg"></div>
-			<div class="company">Modern Farmers</div>
+			<div class="company text-center">Modern Farmers</div>
 			<div class="heading">Buy Now</div>
 		</header>
 

@@ -8,7 +8,7 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])) {
 	$prod_id = NULL;
 }
 
-$sql = "SELECT * FROM items where id = '$prod_id'";
+$sql = "SELECT * FROM items WHERE id = '$prod_id'";
 
 $result = mysqli_query($conn, $sql);
 
