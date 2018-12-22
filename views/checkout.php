@@ -2,8 +2,9 @@
 
 $pageTitle = "Checkout";
 require_once("../partials/start_body.php");
-require_once("../partials/navbar.php");
 
+require_once("../partials/navbar.php");
+require_once("../controllers/connect.php");
 
 
 
@@ -32,6 +33,20 @@ if(!isset($_SESSION['user'])) {
 								<div class="form-group">
 									<input type="text" name="addressLine" class="form-control" value="<?php echo $_SESSION['user']['home_address'] ?>">
 								</div>
+								<h4>Payment Options</h4>
+								<div class="form-group">
+									<select class="form-control" id="payment_mode" name="payment_mode">
+										<?php 
+
+										$payment_mode_query = "SELECT * FROM payment_modes";
+										$payment_modes = mysqli_query($conn, $payment_mode_query);
+										foreach($payment_modes as $payment_mode) {
+											extract($payment_mode);
+											echo "<option value='$id'>$name</option>";
+										}
+										 ?>
+									</select>
+								</div>
 							</div>
 							<div class="col-lg-4">
 								<h4>Amount to Pay</h4>
@@ -46,7 +61,7 @@ if(!isset($_SESSION['user'])) {
 										$subTotal = $_SESSION['cart'][$id] * $item['price'];
 										$cart_total += $subTotal;
 									}
-									echo $cart_total;
+									echo " ₱ ". $cart_total;
 									 ?>
 								</span>
 								<button type="submit" class="btn btn-primary">Place Order Now</button>
@@ -72,9 +87,9 @@ if(!isset($_SESSION['user'])) {
 							$item_info = mysqli_query($conn, $sql_query);
 							$item = mysqli_fetch_assoc($item_info); ?>
 							<td class="align-middle text-center"><?php echo $item['item_name']; ?></td>
-							<td class="align-middle text-center"><?php echo $item['price']; ?></td>
+							<td class="align-middle text-center">₱ <?php echo $item['price']; ?></td>
 							<td class="align-middle text-center"><?php echo $qty;?></td>
-							<td class="align-middle text-center"><?php echo $qty * $item['price']; ;?></td>
+							<td class="align-middle text-center">₱ <?php echo $qty * $item['price']; ;?></td>
 						
 
 						 <?php } 

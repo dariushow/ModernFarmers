@@ -1,5 +1,5 @@
 <?php 
-
+$pageTitle = "Home";
 require_once("../partials/start_body.php");
 
 ?>
@@ -8,149 +8,182 @@ require_once("../partials/start_body.php");
 
 
 
-  <div class="container">
-    <div class="row">
+<div class="container">
+  <div class="row">
 
 
-      <div class="col-lg-2 text-center">
-        <img src="../app/assets/images/logo.jpg">
-      </div>
+    <div class="col-lg-2 text-center">
+      <img src="../app/assets/images/logo.jpg">
+    </div>
 
-      <div class="col-lg-2">
-        <div class="py-5 text-center">
-          <h1 class="header-title">MODERN FARMERS</h1>
-        </div> 
-      </div>
+    <div class="col-lg-2">
+      <div class="py-5 text-center">
+        <h1 class="header-title">MODERN FARMERS</h1>
+      </div> 
+    </div>
 
-      <div class="col-lg-8 mt-3 text-center">
-        <h1>Committed To Quality.</h1>
-        <h2>Committed To You.</h2>
-        <h3>Think Quality!</h3>
-      </div>
+    <div class="col-lg-8 mt-3 text-center">
+      <h1 class="flash animated">Committed To Quality.</h1>
+      <h2 class="flash animated">Committed To You.</h2>
+      <h3 class="flash animated">Think Quality!</h3>
     </div>
   </div>
+</div>
 
 
-  <!-- start of nav -->
+<!-- start of nav -->
 
-  <?php require_once("../partials/navbar.php"); ?>
+<?php require_once("../partials/navbar.php"); ?>
 
-  <script>
-    window.onscroll = function() {myFunction()};
+<script>
+  window.onscroll = function() {myFunction()};
 
-    var navbar = document.getElementById("navigation");
-    var sticky = navbar.offsetTop;
+  var navbar = document.getElementById("navigation");
+  var sticky = navbar.offsetTop;
 
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
     }
-  </script>
-
-  <!-- end of nav -->
-
-  <div class="py-1 bg-dark"></div>
+  }
+</script>
 
 
 
-  <!-- start of carousel -->
+<!-- end of nav -->
 
 
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div id="car" class="carousel-item active">
-        <img class="d-block" src="../app/assets/images/carousel1.jpg" alt="First slide">
-      </div>
-      <div id="car"class="carousel-item">
-        <img class="d-block" src="../app/assets/images/carousel2.jpg" alt="Second slide">
-      </div>
-      <div id="car"class="carousel-item">
-        <img class="d-block" src="../app/assets/images/cow.jpg" alt="Third slide">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
+<div class="container">
+  <div class="row mt-5">
 
-  <!-- end of carousel -->
-
-
-
-  <!-- start of cards -->
-
-  <h1 class="text-center mt-5 feature-collections">QUALITY LIVESTOCK</h1>
-
-  <div class="card-deck mt-5">
-    <div id="flip" class="card">
-      <img class="card-img-top" src="../app/assets/images/chicken-front.jpg" alt="Card image cap">
-      <div class="card-body">
-        <div class="theback"> <img class="ml-2" src="../app/assets/images/chicken-back.jpg"">
-        </div>
-        <h5 class="card-title">Chicken</h5>
-        <p class="card-text">25% off selected Items</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small> 
-      </div>
+    <div class="col-lg-3 text-center">
+      <img class="shake animated" src="../app/assets/images/home-icon.png">
+      <h5 class="text-center home-title">Smart Logistics</h5>
+      <p class="home-text">Delivering our produce to your place is an easy task for our company!</p>
     </div>
 
-    <div id="flip" class="card">
-      <img class="card-img-top" src="../app/assets/images/cow-front.jpg" alt="Card image cap">
-      <div class="card-body">
 
-        <div class="theback"><img src="../app/assets/images/cow-back.jpg"></div>
-        <h5 class="card-title">Cow</h5>
-        <p class="card-text">25% off selected Items</p>
-      </div>
-
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
+    <div class="col-lg-3 text-center">
+      <img class="shake animated" src="../app/assets/images/home-icon1.png">
+      <h5 class="text-center home-title">Products Range</h5>
+      <p class="home-text">We are growing a multitude of different vegetables, fruits and grains...</p>
     </div>
 
-    <div id="flip" class="card mr-0">
-      <img class="card-img-top" src="../app/assets/images/pig-front.jpg" alt="Card image cap">
-      <div class="card-body">
 
-        <div class="theback"><img src="../app/assets/images/pig-back.jpg"></div>
-        <h5 class="card-title">Pig</h5>
-        <p class="card-text">25% off selected Items</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
+    
+    <div class="col-lg-3 text-center">
+      <img class="shake animated"  src="../app/assets/images/home-icon2.png">
+      <h5 class="text-center home-title">Quality Matters</h5>
+      <p class="home-text">We’re determined to keep up the quality of all of our farming products as nigh as possible</p>
+    </div>
+
+
+    
+    <div class="col-lg-3 text-center">
+      <img class="shake animated" src="../app/assets/images/home-icon3.png">
+      <h5 class="text-center home-title">Seasoned Team</h5>
+      <p class="home-text">Our experts spent last few years excelling their skills and expanding their knowledge.</p>
     </div>
   </div>
+</div>
 
-  <!-- end of cards -->
 
-  <!-- start of TRENDING -->
 
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-lg-12 text-center mt-5">
-        <ul class="text-center" id="list">
-          <li id="list1">T</li>
-          <li id="list1">R</li>
-          <li id="list1">E</li>
-          <li id="list1">N</li>
-          <li id="list1">D</li>
-          <li id="list1">I</li>
-          <li id="list1">N</li>
-          <li id="list1">G</li> 
-        </ul>
-      </div>
+
+<!-- start of carousel -->
+
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div id="car" class="carousel-item active">
+      <img class="d-block" src="../app/assets/images/carousel1.jpg" alt="First slide">
+    </div>
+    <div id="car"class="carousel-item">
+      <img class="d-block" src="../app/assets/images/carousel2.jpg" alt="Second slide">
+    </div>
+    <div id="car"class="carousel-item">
+      <img class="d-block" src="../app/assets/images/cow.jpg" alt="Third slide">
     </div>
   </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- end of carousel -->
+
+
+
+
+
+<h1 class="text-center mt-5 feature-collections">QUALITY LIVESTOCK</h1>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-lg-6">
+      <img src="../app/assets/images/quality-livestock.jpg">
+    </div>
+
+    <div class="col-lg-6">
+      <h1 class="mt-5 text-farm">Welcome To Our Pig Farm</h1>
+      <p class="mt-3 farm-text">We raise and breed domestic pigs of all kinds and produce different food products for almost three centuries. Contact us to get pork or bacon of the highest quality just right now. We will proceed your order quickly and deliver your parcel right to your house door.</p>
+      <a href="farm.php"><button class="btn btn-outline-success" type="text">Go to Farm</button></a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-lg-6">
+      <h1 class="mt-5 text-farm">Welcome To Our Chicken Farm</h1>
+      <p class="mt-3 farm-text">We raise and breed domestic chickens of all kinds and produce different food products for almost three centuries. Contact us to get white meat of the highest quality just right now. We will proceed your order quickly and deliver your parcel right to your house door.</p>
+      <a href="farm.php"><button class="btn btn-outline-success" type="text">Go to Farm</button></a>
+    </div>
+    <div class="col-lg-6">
+      <img src="../app/assets/images/quality-livestock1.jpg">
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-lg-6">
+      <img src="../app/assets/images/quality-livestock2.jpg">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="mt-5 text-farm">Welcome To Our Cow's Farm</h1>
+      <p class="mt-3 farm-text">We raise and breed domestic cows of all kinds and produce different food products for almost three centuries. Contact us to get white meat of the highest quality just right now. We will proceed your order quickly and deliver your parcel right to your house door.</p>
+      <a href="farm.php"><button class="btn btn-outline-success" type="text">Go to Farm</button></a>
+    </div>
+  </div>
+</div>
+
+
+<!-- start of TRENDING -->
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-12 text-center mt-5">
+      <ul class="text-center" id="list">
+        <li id="list1">T</li>
+        <li id="list1">R</li>
+        <li id="list1">E</li>
+        <li id="list1">N</li>
+        <li id="list1">D</li>
+        <li id="list1">I</li>
+        <li id="list1">N</li>
+        <li id="list1">G</li> 
+      </ul>
+    </div>
+  </div>
+</div>
 </div>
 
 
@@ -189,6 +222,9 @@ require_once("../partials/start_body.php");
       <div class="details">
         <h3>NEW HAMPSHIRE CHICKEN<br><span>50% off</span></h3>
         <h4 class="text-center">P 2000</h4>
+        <div class="col-lg-3 offset-3">
+        <a href="farm.php"><button class="btn btn-outline-primary mt-1">Go to Farm</button></a>
+        </div>
       </div>
     </div>
     <div class="swiper-slide">
@@ -198,6 +234,9 @@ require_once("../partials/start_body.php");
       <div class="details">
         <h3>FERAL ROOSTER<br><span>50%off</span></h3>
         <h4 class="text-center">P 2,100</h4>
+         <div class="col-lg-3 offset-3">
+        <a href="farm.php"><button class="btn btn-outline-primary mt-1">Go to Farm</button></a>
+        </div>
       </div>
     </div>
     <div class="swiper-slide">
@@ -207,6 +246,9 @@ require_once("../partials/start_body.php");
       <div class="details">
         <h3>RHODE ISLAND RED<br><span>50%off</span></h3>
         <h4 class="text-center">P 3000</h4>
+         <div class="col-lg-3 offset-3">
+        <a href="farm.php"><button class="btn btn-outline-primary mt-1">Go to Farm</button></a>
+        </div>
       </div>
     </div>
     <div class="swiper-slide">
@@ -216,6 +258,9 @@ require_once("../partials/start_body.php");
       <div class="details">
         <h3>HOLSTEIN FRIESIAN BULL<br><span>50%off</span></h3>
         <h4 class="text-center">P 18,000</h4>
+         <div class="col-lg-3 offset-3">
+        <a href="farm.php"><button class="btn btn-outline-primary mt-1">Go to Farm</button></a>
+        </div>
       </div>
     </div>
     <div class="swiper-slide">
@@ -225,6 +270,9 @@ require_once("../partials/start_body.php");
       <div class="details">
         <h3>BRAHMAN CATTLE<br><span>50%off</span></h3>
         <h4 class="text-center">P 16,000</h4>
+         <div class="col-lg-3 offset-3">
+        <a href="farm.php"><button class="btn btn-outline-primary mt-1">Go to Farm</button></a>
+        </div>
       </div>
     </div>
     <div class="swiper-slide">
@@ -234,6 +282,9 @@ require_once("../partials/start_body.php");
       <div class="details">
         <h3>BOS TAURUS<br><span>50%off</span></h3>
         <h4 class="text-center">P 15,000</h4>
+         <div class="col-lg-3 offset-3">
+        <a href="farm.php"><button class="btn btn-outline-primary mt-1">Go to Farm</button></a>
+        </div>
       </div>
     </div>
     <div class="swiper-slide">
@@ -243,6 +294,9 @@ require_once("../partials/start_body.php");
       <div class="details">
         <h3>LARGE WHITE PIG<br><span>50%off</span></h3>
         <h4 class="text-center">P 5,000</h4>
+         <div class="col-lg-3 offset-3">
+        <a href="farm.php"><button class="btn btn-outline-primary mt-1">Go to Farm</button></a>
+        </div>
       </div>
     </div>
     <div class="swiper-slide">
@@ -252,6 +306,9 @@ require_once("../partials/start_body.php");
       <div class="details">
         <h3>BERKSHIRE PIG<br><span>50%off</span></h3>
         <h4 class="text-center">P 6,000</h4>
+         <div class="col-lg-3 offset-3">
+        <a href="farm.php"><button class="btn btn-outline-primary mt-1">Go to Farm</button></a>
+        </div>
       </div>
     </div>
     <div class="swiper-slide">
@@ -261,6 +318,9 @@ require_once("../partials/start_body.php");
       <div class="details">
         <h3>BRITISH LANDRACE PIG<br><span>50%off</span></h3>
         <h4 class="text-center">P 5,000</h4>
+         <div class="col-lg-3 offset-3">
+        <a href="farm.php"><button class="btn btn-outline-primary mt-1">Go to Farm</button></a>
+        </div>
       </div>
     </div>
   </div>
@@ -307,8 +367,8 @@ require_once("../partials/start_body.php");
           <p class="footer-p">Tips to Farming </p>
           <hr>
           <h4 class="footer-title">Contact info</h4>
-          <p class="footer-p">+63 915 2644 507</p>
-          <p class="footer-p">dariuspaano@gmail.com</p> 
+         <p class="footer-p"><i class="fas fa-phone mr-2"></i>+63 915 2644 507</p>
+          <p  class="footer-p"><i class="far fa-envelope mr-2"></i>dariuspaano@gmail.com</p> 
         </div>
 
 
@@ -317,7 +377,7 @@ require_once("../partials/start_body.php");
           <h4 class="footer-title">Follow Us</h4>
           <ul id="snake-hover" class="justify-content-center mt-3"> 
             <li id="snakehover">
-              <a href="#">
+              <a href="https://www.facebook.com/darius.paanohow" target="_blank">
                 <span></span>
                 <span></span>
                 <span></span>

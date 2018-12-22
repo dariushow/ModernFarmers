@@ -1,4 +1,5 @@
 <?php 
+$pageTitle = "About us";
 require_once("../partials/start_body.php");
 ?>
 
@@ -57,75 +58,113 @@ require_once("../partials/start_body.php");
         
 <section id="razor-shape" class="section1"></section>
 <section  id="razor-shape"class="section2">
-  <h1>Lorem ipsum</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+  <h1 class="aboutus-title text-success">About Us</h1>
+  <p class="aboutus-text">Modern Farmers exists to identify and promote the many ways in which sustainable agricultural development can be advanced worldwide. With one shared voice, Modern Farmers highlights the importance of improving farmers’ livelihoods as well as the important contribution that agriculture can make to related global issues such as food security, climate change, and biodiversity. It also aims to build synergies amongst its supporters in promoting Modern Farmer's mission.</p> 
+    </div>
+
+    <div class="col-lg-12 mt-5">
+<h1 class="aboutus-title text-success">Our goal</h1>
+<p class="aboutus-text">Our goal is to provide you with the best service and manage your livestock effeciently and effectively. And To conserve natural resources and maintain a healthy environment.</p>
+      
+    </div>
+  </div>
+</div>
+
+
+
 </section>
+
 
 <section  id="razor-shape"class="section3"></section>
 
-
-<section class="team text-center">
-  <div class="container team-container">
-    <div class="row team-row mt-5 text-center">
-      <h1 class="text-center">Our team</h1>
-      <p class="bg-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
+<div class="our-team-area">
+  <div class="our-team-text text-center">
+    <h1>Our Team</h1>
   </div>
 
 
-<div class="row justify-content-center">
-  
-<figure class="snip1581"><img src="../app/assets/images/fashion2.jpg" alt="profile-sample2"/>
-  <figcaption>
-    <h3 class="title1">Chris Pelaño</h3>
-    <h3 class="title2">CEO</h3>
-    <h3 class="title3">Product Manager</h3>
-  </figcaption><a href="#"></a>
-</figure>
-<figure class="snip1581"><img src="../app/assets/images/fashion2.jpg" alt="profile-sample7"/>
-  <figcaption>
-    <h3 class="title1">Abiegail Pancheco</h3>
-    <h3 class="title2">Vice</h3>
-    <h3 class="title3">CEO</h3>
-  </figcaption><a href="#"></a>
-</figure>
-<figure class="snip1581"><img src="../app/assets/images/fashion2.jpg" alt="profile-sample6"/>
-  <figcaption>
-    <h3 class="title1">Erika Yu Jeco</h3>
-    <h3 class="title2">CEO</h3>
-    <h3 class="title3">Product Manager</h3>
-  </figcaption><a href="#"></a>
-</figure>
-   
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-4">
+        <div class="our-team-box">
+          <img class="fluid" src="../app/assets/images/chris.jpg">
+          <div class="icons">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            
+          </div>
+          <h4>Christopher Peliño</h4>
+          <p>CEO</p>
+        </div>
+      </div>
+
+        <div class="col-md-6 col-lg-4">
+        <div class="our-team-box">
+          <img class="fluid" src="../app/assets/images/erika.jpg">
+          <div class="icons">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            
+          </div>
+          <h4>Christopher</h4>
+          <p>Ui/Ux Designer</p>
+        </div>
+      </div>
+
+        <div class="col-md-6 col-lg-4">
+        <div class="our-team-box">
+          <img class="fluid" src="../app/assets/images/abie.jpg">
+          <div class="icons">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            
+          </div>
+          <h4>Christopher Peliño</h4>
+          <p>CEO</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-     
 
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 offset-2">
+        <div class="our-team-box">
+          <img class="fluid" src="../app/assets/images/jonis.jpg">
+          <div class="icons">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            
+          </div>
+          <h4>Christopher</h4>
+          <p>Ui/Ux Designer</p>
+        </div>
+      </div>
 
+       <div class="col-lg-4">
+        <div class="our-team-box">
+          <img class="fluid" src="../app/assets/images/arvin.jpg">
+          <div class="icons">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            
+          </div>
+          <h4>Christopher</h4>
+          <p>Ui/Ux Designer</p>
+        </div>
+      </div>
+  </div>
+</div>
 
 
 

@@ -1,6 +1,6 @@
 <?php 
 
-// $pagetitle = "Register";
+$pageTitle = "Register";
 require_once("../partials/start_body.php");
 
 
@@ -106,7 +106,7 @@ require_once("../partials/start_body.php");
 						</div>	
 						
 						<div class="footer-registration">
-							<p>Already have an account?&nbsp;<a href="#">Login</a></p>
+							<p>Already have an account?&nbsp;<a href="login.php">Login</a></p>
 						</div>
 
 						<button id="add-user" type="submit" class="btn btn-outline-warning btn-lg d-block mx-auto">Sign Up</button>

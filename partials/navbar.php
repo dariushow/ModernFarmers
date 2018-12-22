@@ -21,13 +21,14 @@ if(isset($_GET["section"])) {
 
 
 <nav id="navigation" class="navbar navbar-expand-lg navbar-light">
-  <a id="modern-farmers" class="navbar-brand" href="#"><i class="fas fa-home"></i>Home</a>
+  <a id="modern-farmers" class="navbar-brand" href="index.php"><i class="fas fa-home"></i>Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+     <?php if((!isset($_SESSION['user'])) || ((isset($_SESSION['user'])) && ($_SESSION['user']['role_id'] == 2) )) { ?>
 
       <li class="nav-item">
         <a class="nav-link <?php if($section == "catalog") { echo "active"; } ?>" href="../views/farm.php?section=catalog"><i class="fas fa-user"></i> Farm </a>
@@ -35,7 +36,7 @@ if(isset($_GET["section"])) {
 
       <li class="nav-item">
         <a class="nav-link <?php if($section == "cart") { echo "active"; } ?>" href="/capstone2-ecommerce/views/cart.php?section=cart"><i class="fas fa-shopping-cart"></i>
-          <span id="cart-count" class="badge badge-light small">
+          <span id="cart-count" class="badge badge-light"></sup>
             <?php 
             if(isset($_SESSION["cart"])) {
              echo array_sum($_SESSION["cart"]);
@@ -47,9 +48,24 @@ if(isset($_GET["section"])) {
         Cart
       </a>
     </li>
-  </li>
+  <?php } ?>
+  <?php if(isset($_SESSION['user']) && $_SESSION['user']['role_id'] == 1) { ?>
+    <li class="nav-item">
+      <a href="items.php" class="nav-link">Item Admin</a>
+    </li>
+    <li class="nav-item">
+      <a href="users.php" class="nav-link">User Admin</a>
+    </li>
+     <li class="nav-item">
+      <a href="orders.php" class="nav-link">Orders</a>
+    </li>
+  <?php } ?>
+
   <li class="nav-item">
     <a class="nav-link" href="aboutus.php">About us</a>
+  </li>
+   <li class="nav-item">
+    <a class="nav-link" href="gallery.php">Our Products</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -77,7 +93,7 @@ if(isset($_GET["section"])) {
   </li>
 <?php else: ?>
   <li class="nav-item">
-    <a href="nav-link" class="nav-link">Welcome, <?php echo $_SESSION["user"]["username"]; ?> </a>
+    <a href="../views/profile.php" class="nav-link">Welcome, <?php echo $_SESSION["user"]["username"]; ?> </a>
 
   </li>
   <li class="nav-item">

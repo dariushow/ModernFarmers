@@ -1,6 +1,9 @@
 <?php 
 $pageTitle = "Cart";
 require_once("../partials/start_body.php");
+if(!isset($_SESSION['user']) || (isset($_SESSION['user']) && $_SESSION['user']['role_id'] == 1)){
+	header(("Location: error.php"));
+}
 
 
 
@@ -18,6 +21,7 @@ require_once("../partials/start_body.php");
 					<table id="cart-items" class="table table-striped table-bordered">
 						<thead>
 							<tr class="text-center">
+								<th>Image</th>
 								<th>Item Name</th>
 								<th>Item Price</th>
 								<th>Item Quantity</th>
@@ -38,10 +42,11 @@ require_once("../partials/start_body.php");
 									$subtotal = $_SESSION["cart"][$id] * $item["price"];
 									$cart_total += $subtotal; ?>
 							 <tr>
+							 	<td class="image"><img src="../app/assets/images/<?php echo $item["image"] ?>"></td>
 							 	<td class="item_name"> <?php echo $item["item_name"] ?></td>
-							 	<td class="item_price"> <?php echo $item["price"] ?></td>
+							 	<td class="item_price">₱<?php echo number_format($item["price"], 2, ".", ",") ?></td>
 							 	<td class="item_quantity"> <input type="number" class="form-control text-right" value="<?php echo $qty ?>" data-id="<?php echo $id ?>"> </td>
-							 	<td class="item_subtotal"><?php echo $subtotal ?></td>
+							 	<td class="item_subtotal">₱<?php echo number_format($item["price"], 2, ".", ",") ?></td>
 
 
 							 	<td class="item_action"> <button class="btn btn-danger item-remove" data-id="<?php echo $id ?>"> Remove From Cart</button></td>
@@ -58,7 +63,7 @@ require_once("../partials/start_body.php");
 						<tfoot>
 							<tr>
 								<td class="text-right font-weight-bold align-middle" colspan="3">Total:</td>
-								<td class="text-right font-weight-bold align-middle" id="total_price"><?php echo $cart_total; ?></td>
+								<td class="text-right font-weight-bold align-middle" id="total_price">₱ <?php echo $cart_total; ?></td>
 								<td class="text-center align-middle">
 									<a href="checkout.php" class="btn btn-primary"> Proceed to checkout</a>
 								</td>

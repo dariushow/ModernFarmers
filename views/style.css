@@ -1,66 +1,62 @@
-/*.preload {
-  width: 100%;
-  height: 100%;
-  background: #333;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
+.zoom-hover:hover {
+transform:  scale(1.1);
 }
 
-.logo-loader {
-  width: 300px;
-  height: 70px; 
-  margin: 150px auto 50px auto;
-  font-size: 50px;
-  text-shadow: -1px 2px 2px #000;
-  text-align: center;
-  color: azure;
-}
 
-.loader-frame {
-  width: 70px;
-  height: 70px;
-  margin: auto;
-  position: relative;
-}
-.loader1, .loader2 {
-  position: absolute;
-  border: 5px solid transparent;
-  border-radius: 50%;
+.list-group-item:hover {
+  transform:  scale(1.1);
+  background:  black;
+  color: white;
+
 
 }
 
-.loader1 {
-  width: 70px;
-  height: 70px;
-  border-top: 5px solid azure;
-  border-bottom: 5px solid azure;
-  animation: clockwisespin 2s linear 3;
+.card-img-top:hover {
+  transform: scale(1.1);
+
 }
 
-.loader2 {
-  width: 60px;
-  height: 60px;
-  border-left: 5px solid darkturquoise;
-  border-right: 5px solid darkturquoise;
-  top: 5px; left: 5px;
-  animation: anticlockwisespin 2s linear 3;
-
-}*/
-
-/*@keyframes clockwisespin {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(360deg);}
+.jumbotron {
+  background: url(../app/assets/images/animals-jumbo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
-@keyframes anticlockwisespin {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(-360deg);}
+.display-5 {
+  color: white;
+  letter-spacing: 0.5;
+  font-size: 3em;
+
 }
-*/
+
+.welcome-text {
+  color:  black;
+  font-size: 26px;
+}
 
 
+.badge {
+
+vertical-align: super;
+font-size: 12px;
+background: #ff0000;
+color: #fff;
+padding: 0 5px;
+vertical-align: top;
+
+}
+
+
+.home-title {
+  font-size: 28px;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+}
+.home-text {
+  font-family: 'Charm', cursive;
+  font-size: 24px;  
+}
 
 /*start of rotating text*/
 
@@ -152,8 +148,6 @@ img {
 
 #navigation {
 
-
-  /*background-image: linear-gradient(to right, #FC354C , #0ABFBC);*/
   font-size: 20px;
   font-family: sans-serif;
   background: #DCEDC2;
@@ -184,11 +178,6 @@ img {
 
 }
 
-/*.line:hover {
-  text-decoration: underline;
-}*/
-
-
 
 
 .card {
@@ -215,76 +204,26 @@ img {
 
 }
 
-/* THE CARD HOLDS THE FRONT AND BACK FACES */
-#flip{
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  transform-style: preserve-3d;
-  transition: all 0.8s ease;
+
+.text-farm {
+  font-size: 2.5em;
+  letter-spacing: 1.5px;
+  font-family: roboto;
+  font-weight: bolder;
+  text-shadow: 2px 1px;
+}
+
+.farm-text {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.chicken-farm {
 
 }
 
-/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
-#flip:hover{
-  transform: rotateY(180deg);
-}
-
-/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
- .thefront{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  border-radius: 10px;
-  backface-visibility: hidden;
-  overflow: hidden;
-  background: white;
-  color: #000;
- 
-
-}
-
-/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
-.theback{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  backface-visibility: hidden;
-  overflow: hidden;
-  background: #fafafa;
-  color: #333;
-  text-align: center;
-  transform: rotateY(180deg);
-}
-
-
-/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
-.thefront h1, .theback h1{
-  font-family: 'zilla slab', sans-serif;
-  padding: 30px;
-  font-weight: bold;
-  font-size: 24px;
-  text-align: center;
-
-}
-
-.thefront p, .theback p{
-  font-family: 'zilla slab', sans-serif;
-  padding: 30px;
-  font-weight: normal;
-  font-size: 12px;
-  text-align: center;
-}
-/*This block (ends here) is merely styling for the flip card, and is NOT an essential part of the flip code */
 /*start of 3d carousel*/
+
  .swiper-container {
       width: 100%;
       padding-top: 50px;
@@ -803,6 +742,18 @@ header {
   box-sizing: border-box;
 }
 
+.aboutus-text {
+  font-size: 2em;
+  letter-spacing: 1.5;
+  font-family: 'Indie Flower', cursive;
+
+
+}
+
+.aboutus-title {
+  font-family: 'Indie Flower', cursive;
+  font-size: 3em;
+}
 
 
 
@@ -811,78 +762,7 @@ header {
   color: white;
  }
 
- @import url(https://fonts.googleapis.com/css?family=Poppins:300,700);
-.snip1581 {
-  font-family: 'Poppins:400,700', Arial, sans-serif;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  margin: 8px;
-  min-width: 250px;
-  max-width: 310px;
-  width: 100%;
-  background-color: #000000;
-  color: #ffffff;
-  text-align: left;
-  font-size: 16px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-}
-.snip1581 * {
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.snip1581 img {
- width: 400px;
-  vertical-align: top;
-  height: 70vh;
-}
-.snip1581 figcaption {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.snip1581 h3 {
-  font-size: 44px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin: 3px 0;
-}
-.snip1581 .title1 {
-  font-weight: 700;
-}
-.snip1581 .title2 {
-  color: #a58e7c;
-  font-weight: 300;
-}
-.snip1581 .title3 {
-  font-weight: 700;
-  font-size: 25px;
-}
-.snip1581 a {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.snip1581:hover img,
-.snip1581.hover img {
-  -webkit-transform: scale(1.3) rotate(5deg);
-  transform: scale(1.3) rotate(5deg);
-}
-
+ 
 /*start of product.php*/
 .image-product {
   width: 400px;
@@ -901,13 +781,65 @@ header {
   letter-spacing: 5px;
 }
 
-.farm-product {
-  background: gray;
-  height: 350vh;
- 
+.diamond {
+  transform: rotate(45deg);
+  height: 100px;
+  width: 100px;
+}
+
+.our-team-area {
+  padding-top: 120px;
+}
+
+.our-team-text {
+  padding-bottom: 60px;
+}
+
+.our-team-text h1 {
+  font-weight: 600;
+  font-size: 34px;
+}
+
+.our-team-box {
+  text-align: center;
+}
+
+.our-team-box img {
+  border: 10px solid #202020;
 
 }
 
+.icons i {
+  margin: 6px;
+  font-size: 20px;
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 3px;
+
+}
+
+.icons {
+  background-color: #2fd3ae;
+  padding: 8px;
+  margin-left: 25px;
+  margin-right: 25px;
+  position: relative;
+  margin-top: -35px;
+
+}
+
+.icons a {
+  color: #fff;
+}
+
+.icons a:hover {
+  color: #202020;
+}
+
+.fluid {
+  height: 300px;
+  width: 300px;
+}
 
 
 
